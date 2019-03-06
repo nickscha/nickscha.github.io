@@ -1,0 +1,56 @@
+html, body {
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: 40px 1fr 1fr 20px;
+    /*grid-template-columns: 200px;*/
+    grid-template-areas: "head head" "nav cnt" "nav cnt" "foot foot";
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        grid-template-areas: "head head" "nav nav" "cnt cnt" "foot foot";
+        grid-template-rows: 40px 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+#container>header {
+    grid-area: head;
+    background-color: lightslategrey;
+    position: sticky;
+    top: 0;
+}
+
+#container>nav {
+    grid-area: nav;
+    background-color: lightsalmon;
+}
+
+#container>#content {
+    grid-area: cnt;
+    background-color: yellowgreen;
+}
+
+#container>footer {
+    grid-area: foot;
+    background-color: beige;
+}
+
+button {
+    font-size: 100%;
+    font-family: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.1s;
+}
+
+button:hover {
+    cursor: default;
+    color: white;
+}
