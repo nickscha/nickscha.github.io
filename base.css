@@ -1,11 +1,12 @@
-html, body {
+html,
+body {
 	font-family: "Segoe UI", Arial, sans-serif;
 	font-size: 14px;
 	background-color: rgb(240, 240, 240);
 	margin: 0 auto;
 }
 
-header {
+.site-header {
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -15,9 +16,10 @@ header {
 	font-size: 20px;
 	color: white;
 	vertical-align: middle;
+	padding-left: 20px;
 }
 
-header .menubut {
+.site-header .menubut {
 	cursor: pointer;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -27,16 +29,12 @@ header .menubut {
 	user-select: none;
 }
 
-header .rightMenu {
-	position: absolute;
-	list-style: none;
-	position: absolute;
-	right: 20px;
-	top: 0;
-}
-
 .content {
 	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
 }
 
 .overlay {
@@ -45,34 +43,29 @@ header .rightMenu {
 	position: fixed;
 	z-index: 1;
 	top: 40px;
-	background-color: rgb(10, 10, 10);
 	background-color: rgba(10, 10, 10, 0.9);
 	overflow-x: hidden;
-}
-
-.left {
 	left: 0;
-}
-
-.right {
-	right: 0;
 }
 
 .overlay-content {
 	position: relative;
 	width: 100%;
 	margin-top: 30px;
+	padding-left: 20px;
 }
 
 .overlay a {
-	padding: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	text-decoration: none;
 	font-size: 20px;
 	color: #a0a0a0;
 	display: block;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
 	color: #f1f1f1;
 }
 
